@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSSNEGA • OSIM MTSN 3 TULUNGAGUNG</title>
+    <meta name="description" content="Organisasi Siswa Intra Sekolah MTSN 3 Tulungagung - Wadah pengembangan diri siswa yang kreatif dan inovatif">
+    <meta name="keywords" content="OSIS, OSIM, MTSN 3 Tulungagung, OSSNEGA, organisasi siswa, sekolah, kegiatan siswa">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ossnega.netlify.app/">
+    <meta property="og:title" content="OSIM MTSN 3 TULUNGAGUNG - OSSNEGA">
+    <meta property="og:description" content="Organisasi Siswa Intra Sekolah MTSN 3 Tulungagung - Wadah pengembangan diri siswa yang kreatif dan inovatif">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=OSSMTSN3+TULUNGAGUNG">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ossnega.netlify.app/">
+    <meta property="twitter:title" content="OSIM MTSN 3 TULUNGAGUNG - OSSNEGA">
+    <meta property="twitter:description" content="Organisasi Siswa Intra Sekolah MTSN 3 Tulungagung - Wadah pengembangan diri siswa yang kreatif dan inovatif">
+    <meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=OSSMTSN3+TULUNGAGUNG">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://via.placeholder.com/64x64.png?text=O" type="image/png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a365d',    // Biru tua dari logo
+                        secondary: '#e9b824',  // Kuning keemasan dari logo
+                        accent: '#2d3748',     // Abu-abu tua
+                        light: '#f7fafc'       // Putih kebiruan
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .navbar {
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-scrolled {
+            background-color: #1a365d;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('https://via.placeholder.com/1920x1080.png?text=OSSMTSN3+TULUNGAGUNG') center/cover;
+        }
+        
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .blog-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+    
+    <!-- Schema.org markup for Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OSIM MTSN 3 Tulungagung",
+      "alternateName": "OSSNEGA",
+      "url": "https://ossnega.netlify.app",
+      "logo": "https://via.placeholder.com/300x100.png?text=OSSNEGA+Logo",
+      "description": "Organisasi Siswa Intra Sekolah MTSN 3 Tulungagung - Wadah pengembangan diri siswa yang kreatif dan inovatif",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Boyolangu No. 123",
+        "addressLocality": "Tulungagung",
+        "addressRegion": "Jawa Timur",
+        "addressCountry": "Indonesia"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+62-355-1234567",
+        "contactType": "Customer service"
+      },
+      "sameAs": [
+        "https://www.instagram.com/ossnega",
+        "https://www.tiktok.com/@ossnega"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center">
+            <a href="#" class="text-white text-2xl font-bold flex items-center">
+                <img src="https://via.placeholder.com/50x50.png?text=O" alt="OSSNEGA Logo" class="h-10 w-10 mr-2 rounded">
+                OSSNEGA
+            </a>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+            <a href="#home" class="text-white hover:text-secondary transition">Beranda</a>
+            <a href="#about" class="text-white hover:text-secondary transition">Tentang</a>
+            <a href="#gallery" class="text-white hover:text-secondary transition">Galeri</a>
+            <a href="#activities" class="text-white hover:text-secondary transition">Kegiatan</a>
+            <a href="#contact" class="text-white hover:text-secondary transition">Kontak</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-40 flex flex-col items-center justify-center hidden">
+        <button id="close-btn" class="absolute top-6 right-6 text-white text-2xl">
+            <i class="fas fa-times"></i>
+        </button>
+        
+        <div class="flex flex-col space-y-8 text-center">
+            <a href="#home" class="text-white text-xl hover:text-secondary transition">Beranda</a>
+            <a href="#about" class="text-white text-xl hover:text-secondary transition">Tentang</a>
+            <a href="#gallery" class="text-white text-xl hover:text-secondary transition">Galeri</a>
+            <a href="#activities" class="text-white text-xl hover:text-secondary transition">Kegiatan</a>
+            <a href="#contact" class="text-white text-xl hover:text-secondary transition">Kontak</a>
+        </div>
+        
+        <div class="absolute bottom-10 flex space-x-6">
+            <a href="https://www.instagram.com/ossnega" target="_blank" class="text-white text-2xl hover:text-secondary transition">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ossnega" target="_blank" class="text-white text-2xl hover:text-secondary transition">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col items-center text-center text-white" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">OSIM MTSN 3 TULUNGAGUNG</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl">Organisasi Siswa Intra Sekolah yang mewadahi pengembangan diri siswa secara kreatif dan inovatif</p>
+                <a href="#about" class="bg-secondary text-primary font-semibold px-8 py-3 rounded-lg hover:bg-yellow-500 transition">Jelajahi Lebih Lanjut</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-light">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Tentang OSIM MTSN 3 TULUNGAGUNG</h2>
+                <div class="w-20 h-1 bg-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://via.placeholder.com/600x400.png?text=Kegiatan+OSIM" alt="Kegiatan OSIM" class="rounded-lg shadow-lg">
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold text-primary mb-6">OSSNEGA - Wadah Kreativitas dan Prestasi</h3>
+                    <p class="text-gray-700 mb-4">
+                        OSIM MTSN 3 Tulungagung atau yang dikenal dengan OSSNEGA adalah organisasi siswa intra sekolah 
+                        yang bertujuan untuk mengembangkan potensi siswa dalam berbagai bidang seperti kepemimpinan, 
+                        kreativitas, dan sosial.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Sejak berdiri, OSSNEGA telah melahirkan banyak pemimpin-pemimpin muda yang berkarakter dan 
+                        berprestasi baik di tingkat regional maupun nasional. Kami percaya bahwa setiap siswa memiliki 
+                        potensi yang dapat dikembangkan melalui wadah yang tepat.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-primary rounded-full p-3 mr-4">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">200+ Anggota</h4>
+                                <p class="text-sm text-gray-600">Siswa aktif</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary rounded-full p-3 mr-4">
+                                <i class="fas fa-trophy text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">50+ Prestasi</h4>
+                                <p class="text-sm text-gray-600">Tingkat daerah & nasional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Galeri Kegiatan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Dokumentasi berbagai kegiatan dan acara yang diselenggarakan oleh OSIM MTSN 3 Tulungagung</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <!-- Slider main container -->
+            <div class="swiper gallerySwiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/600x400.png?text=Kegiatan+1" alt="Kegiatan OSIM 1" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-primary bg-opacity-70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <p class="text-white text-center px-4">Pelantikan Pengurus OSIM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/600x400.png?text=Kegiatan+2" alt="Kegiatan OSIM 2" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-primary bg-opacity-70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <p class="text-white text-center px-4">Kegiatan Bakti Sosial</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/600x400.png?text=Kegiatan+3" alt="Kegiatan OSIM 3" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-primary bg-opacity-70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <p class="text-white text-center px-4">Lomba Hari Kemerdekaan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/600x400.png?text=Kegiatan+4" alt="Kegiatan OSIM 4" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-primary bg-opacity-70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <p class="text-white text-center px-4">Pentas Seni Tahunan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="relative group overflow-hidden rounded-lg">
+                            <img src="https://via.placeholder.com/600x400.png?text=Kegiatan+5" alt="Kegiatan OSIM 5" class="w-full h-64 object-cover">
+                            <div class="absolute inset-0 bg-primary bg-opacity-70 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                                <p class="text-white text-center px-4">Pelatihan Kepemimpinan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next text-primary"></div>
+                <div class="swiper-button-prev text-primary"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="py-20 bg-light">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Kegiatan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Berbagai program dan kegiatan unggulan OSIM MTSN 3 Tulungagung</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Latihan Kepemimpinan</h3>
+                    <p class="text-gray-600">Program pengembangan karakter dan kepemimpinan siswa melalui berbagai pelatihan dan kegiatan.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hands-helping text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Bakti Sosial</h3>
+                    <p class="text-gray-600">Kegiatan sosial untuk melatih kepedulian siswa terhadap lingkungan dan masyarakat sekitar.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-palette text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-primary mb-3">Pentas Seni</h3>
+                    <p class="text-gray-600">Wadah untuk mengekspresikan bakat dan kreativitas siswa di bidang seni dan budaya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Hubungi Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Jangan ragu untuk menghubungi kami untuk informasi lebih lanjut tentang OSIM MTSN 3 Tulungagung</p>
+                <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold text-primary mb-6">Informasi Kontak</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-3 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">Alamat</h4>
+                                <p class="text-gray-600">Jl. Raya Boyolangu No. 123, Tulungagung, Jawa Timur</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-3 mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">Email</h4>
+                                <p class="text-gray-600">ossnega@mtsn3tulungagung.sch.id</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary rounded-full p-3 mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-primary">Telepon</h4>
+                                <p class="text-gray-600">(0355) 1234567</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-primary mb-4">Ikuti Kami di Media Sosial</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/ossnega" target="_blank" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-900 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@ossnega" target="_blank" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-900 transition">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-900 transition">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-semibold text-primary mb-6">Kirim Pesan</h3>
+                    
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Pesan</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-primary text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-900 transition">
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-12">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">OSSNEGA</h3>
+                    <p class="mb-4">Organisasi Siswa Intra Sekolah MTSN 3 Tulungagung yang mewadahi pengembangan diri siswa secara kreatif dan inovatif.</p>
+                    <p>© 2023 OSIM MTSN 3 Tulungagung. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Tautan Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-secondary transition">Beranda</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition">Tentang</a></li>
+                        <li><a href="#gallery" class="hover:text-secondary transition">Galeri</a></li>
+                        <li><a href="#activities" class="hover:text-secondary transition">Kegiatan</a></li>
+                        <li><a href="#contact" class="hover:text-secondary transition">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Kontak</h4>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Jl. Raya Boyolangu No. 123, Tulungagung</p>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> ossnega@mtsn3tulungagung.sch.id</p>
+                    <p class="mb-4"><i class="fas fa-phone mr-2"></i> (0355) 1234567</p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/ossnega" target="_blank" class="text-white text-xl hover:text-secondary transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@ossnega" target="_blank" class="text-white text-xl hover:text-secondary transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="#" class="text-white text-xl hover:text-secondary transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Initialize Swiper
+        const swiper = new Swiper('.gallerySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+        
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            Swal.fire({
+                title: 'Pesan Terkirim!',
+                text: 'Terima kasih telah menghubungi kami. Kami akan segera merespons pesan Anda.',
+                icon: 'success',
+                confirmButtonColor: '#1a365d',
+                confirmButtonText: 'OK'
+            });
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
